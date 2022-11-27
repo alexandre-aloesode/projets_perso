@@ -36,8 +36,6 @@
         if(!isset($_SESSION['chosen_word'])){
             $_SESSION['turn'] = 0;
             $_SESSION['chosen_word'] = $dico_sans_espaces[rand(0, $wCount -1)];
-            $_SESSION['chosen_word'] = (utf8_decode($_SESSION['chosen_word']));
-            var_dump($_SESSION['chosen_word']);
             $_SESSION['chosen_word'] = str_replace($search, $replace, $_SESSION['chosen_word']);
             $_SESSION['chosen_word'] = strtoupper($_SESSION['chosen_word']);
             $_SESSION['hidden_word'] = '';
