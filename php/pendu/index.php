@@ -26,22 +26,20 @@
 
         $search  = array('À', 'Á', 'Â', 'Ã', 'Ä', 'Å', 'Ç', 'È', 'É', 'Ê', 'Ë', 'Ì', 'Í', 'Î', 'Ï', 'Ò', 'Ó', 'Ô', 'Õ', 'Ö', 'Ù', 'Ú', 'Û', 'Ü', 'Ý', 'à', 'á', 'â', 'ã', 'ä', 'å', 'ç', 'è', 'é', 'ê', 'ë', 'ì', 'í', 'î', 'ï', 'ð', 'ò', 'ó', 'ô', 'õ', 'ö', 'ù', 'ú', 'û', 'ü', 'ý', 'ÿ');
 	    $replace = array('A', 'A', 'A', 'A', 'A', 'A', 'C', 'E', 'E', 'E', 'E', 'I', 'I', 'I', 'I', 'O', 'O', 'O', 'O', 'O', 'U', 'U', 'U', 'U', 'Y', 'a', 'a', 'a', 'a', 'a', 'a', 'c', 'e', 'e', 'e', 'e', 'i', 'i', 'i', 'i', 'o', 'o', 'o', 'o', 'o', 'o', 'u', 'u', 'u', 'u', 'y', 'y');
-        $min = array('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z');
-        $maj = array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
         
         $dico = file('dico_france.txt');
-        $dico_clean = array_map('trim', $dico);
+        $dico_sans_espaces= array_map('trim', $dico);
 
-        $wCount = count($dico_clean);
+        $wCount = count($dico_sans_espaces);
 
-        
-        
+    
         if(!isset($_SESSION['chosen_word'])){
             $_SESSION['turn'] = 0;
-            $_SESSION['chosen_word'] = $dico_clean[rand(0, $wCount -1)];
+            $_SESSION['chosen_word'] = $dico_sans_espaces[rand(0, $wCount -1)];
+            $_SESSION['chosen_word'] = (utf8_decode($_SESSION['chosen_word']));
+            var_dump($_SESSION['chosen_word']);
             $_SESSION['chosen_word'] = str_replace($search, $replace, $_SESSION['chosen_word']);
-            $_SESSION['chosen_word'] = str_replace($min, $maj, $_SESSION['chosen_word']);
-            
+            $_SESSION['chosen_word'] = strtoupper($_SESSION['chosen_word']);
             $_SESSION['hidden_word'] = '';
             for($x = 0; $x < strlen($_SESSION['chosen_word']); $x++){
                 $_SESSION['hidden_word'] = $_SESSION['hidden_word'] . '-';
@@ -52,6 +50,7 @@
 
         
         if(isset($_GET['letter'])){
+
             if(str_contains($_SESSION['chosen_word'], $_GET['letter'])){
                 for($i = 0; $i < strlen($_SESSION['chosen_word']); $i++){
                     if($_SESSION['chosen_word'][$i] == $_GET['letter']){
