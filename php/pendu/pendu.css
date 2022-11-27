@@ -17,6 +17,7 @@ header{
 }
 
 #Pendu{
+    background-color: #CCCCFF;
     width:80%;
     border: solid 2px black;
     border-radius: 10px;
@@ -27,6 +28,7 @@ header{
 }
 
 #consignes{
+    background-color: #EFEDEE;
     border-bottom: solid 2px black;
     width: 100%;
     height: 80px;
@@ -36,6 +38,7 @@ header{
 
 
 #aide{
+    background-color: #EFEDEE;
     width: 100%;
     height: 180px;
     display: flex;
@@ -44,17 +47,29 @@ header{
     padding-left: 10px;
     border-bottom: solid 2px black;
     align-items: center;
+    font-size: 120%;
 }
     #hidden_word{
-        width: 50%;
+        width: 30%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         height: 90px;
     }
+    #dessin{
+        width: 40%;
+        height: 90px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+        #dessin img{
+            height: 150px;
+            width: 280px;
+        }
 
     #history{
-        width: 50%;
+        width: 30%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -72,6 +87,8 @@ header{
     padding-left: 10px;
 }
     #keyboard button{
+        width: 60px;
+        height: 60px;
         font-size: 150%;
     }
 
@@ -101,14 +118,53 @@ header{
         font-size: 50%;
         margin-bottom: 20px;
     }
-    #keyboard button{
+
+    #consignes{
+        padding-left: 10px;
+    }
+
+    #aide{
+        height: 100px;
         font-size: 80%;
     }
+    #hidden_word{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 90px;
+    }
+    #history{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        height: 90px;
+    }
+        #dessin{
+            width: 40%;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+            #dessin img{
+                height: 90px;
+                width: 100px;     }
+        
+    #keyboard{
+        gap: 20px;
+    }
+        #keyboard button{
+            width: 35px;
+            height: 35px;
+            font-size: 120%;
+        }
 
     #reset{
         width: 50%;
     }
-    #reset_button{
-        font-size: 120%;
-    }
+        #reset_button{
+            font-size: 120%;
+        }
 }

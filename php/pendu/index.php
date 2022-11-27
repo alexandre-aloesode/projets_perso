@@ -103,6 +103,11 @@
         </section>
 
         <section id='dessin'>
+            <?php
+            if(isset($_SESSION['chosen_word'])){
+                echo '<img src="pendu' . $_SESSION['lifes'] . '.png">';
+            }
+            ?>
      
         </section>
 
@@ -149,7 +154,6 @@
         </h3>
         <h3>
          <?php 
-         echo $_SESSION['chosen_word'];
          $_SESSION['turn'] ++;
          ?>
          </h3>
