@@ -6,24 +6,43 @@ body {
     background-size: cover;
 }
 
-#classement {
-    color: white;
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 150%;
-    
+    margin: 10%;
+    margin-top: 50px;
+}
+
+h2 {
+    color: white;
+    text-decoration: underline;
+    display: flex;
+    justify-content: center;
+    font-size: 200%;
 }
 
 table {
-    border: solid 2px white;
-    margin-bottom: 250px;
     border-collapse: collapse;
+    line-height: 50px;
+    width: 90%;
 }
-    th {
-        border-bottom: solid 2px white;;
-        width: 150px;
+
+    thead {
+        border-bottom: solid 2px white;
+        text-transform: uppercase;
+        color: white;
     }
+
+    tr {
+        border-bottom: solid 1px rgba(255, 255, 255, 0.454);
+    }
+
     td {
         text-align: center;
-    }   
+        color: white;
+      }
+      
+    i {
+        color: white;
+    } 

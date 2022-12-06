@@ -20,32 +20,35 @@
 
     <?php include 'header.php' ?>
 
-    <section id="classement">
+    <main>
+        
+        <section id="classement">
 
-        <h2>Classement Général</h2>
+            <h2>Classement Général</h2>
 
-        <table>
+            <table>
 
-            <thead>
-                <th>Joueur</th>
-                <th>Nombre de parties</th>
-                <th>Nombre de victoires</th>
-                <th>Pourcentage de victoires</th>
-            </thead>
+                <thead>
+                    <th>Joueur</th>
+                    <th>Nombre de parties</th>
+                    <th>Nombre de victoires</th>
+                    <th>Pourcentage de victoires</th>
+                </thead>
 
-            <tbody>
-                <?php
-                    while($classement !=null){
-                        echo '<tr>';
-                        foreach($classement as $value){
-                            echo '<td>' . $value . '</td>';
+                <tbody>
+                    <?php
+                        while($classement !=null){
+                            echo '<tr>';
+                            foreach($classement as $value){
+                                echo '<td>' . $value . '</td>';
+                            }
+                            $classement = $query_classement->fetch_array(MYSQLI_ASSOC);
+                            echo '</tr>';
                         }
-                        $classement = $query_classement->fetch_array(MYSQLI_ASSOC);
-                        echo '</tr>';
-                    }
-                ?>
-            </tbody>
-        </table>
-    </section>
+                    ?>
+                </tbody>
+            </table>
+        </section>
+    </main>
 </body>
 </html>

@@ -15,7 +15,7 @@
     ?>
 
     <main>
-
+        <form method="post" class="formulaire">
         <?php 
             if($check !== 2) {
             echo '
@@ -39,17 +39,19 @@
             
             else {
                 echo '
-                <form method="post" class="formulaire">
+                
                 <label for="pseudo" class="form_label">Pseudo :</label><br>
                 <input type="text" name="pseudo" class="form_input">
+                <br>
                 <label for="password" class="form_label">Mot de passe :</label><br>
                 <input type="password" name="mdp" class="form_input">
                 <br>
                 <button type="submit" name="connexion" 
                 class="form_button">Connexion</button>
-                </form>' ;
+                ' ;
             }
         ?>
+        </form>
         </main>
 </body>
 </html>
