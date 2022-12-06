@@ -1,0 +1,62 @@
+
+header{
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-bottom: 30px;
+    font-size: 150%;
+}
+
+nav {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+    
+    nav ul{
+        display: flex;
+        gap: 30px;
+        padding :0;
+    }
+    nav ul a{
+        text-decoration: none;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    nav ul a:hover{
+        color: gold;
+        text-decoration: underline gold;
+        transition-duration: 0.3s;
+    }
+    nav ul li{
+        list-style-type: none;
+    }
+ #deco_form{
+    border: none;
+    text-decoration: none;
+}
+nav button{
+    border: none;
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    background: none;
+}
+    nav button:hover{
+        color: gold;
+        text-decoration: underline gold;
+        transition-duration: 0.3s;
+    }
+
+@media screen and (max-width:920px){
+    header{
+        margin-bottom: 0;
+        font-size: 90%;
+    }
+    nav ul{
+        gap: 10px;
+    }
+}
