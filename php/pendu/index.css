@@ -1,50 +1,46 @@
 
 @import url('https://fonts.cdnfonts.com/css/dactylographe');
 
-*{
-    margin:0;
-}
-
-.background{
+body {
     background-image: url(https://wallpaperaccess.com/full/56591.png);
     opacity: 0.90;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    margin: 0;
 }
 
-main{
+main {
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin-left: 15%;
     margin-right: 15%;
     font-size: 150%;
     color: white;
-    height: 900px;
 }
 
-    main h2{
+    main h2 {
         margin-bottom: 30px;
     }
-    main p{
+
+    main p {
         margin-bottom: 20px;
     }
 
-#accueil{
+#accueil {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
 }
-    #accueil_texte{
+
+    #accueil_texte {
         display: flex;
         flex-direction: column;
         width: 65%;
     }
-    #accueil_stats{
+
+    #accueil_stats {
         display: flex;
         flex-direction: column;
         border-left: solid 2px white;
@@ -52,8 +48,8 @@ main{
         width: 25%;
     }
 
-#stats{
-    margin-top: 150px;
+#stats {
+    margin-top: 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -61,8 +57,8 @@ main{
     margin-bottom: 300px;
 }
 
-@media screen and (max-width:920px){
-    main{
+@media screen and (max-width:920px) {
+    main {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;

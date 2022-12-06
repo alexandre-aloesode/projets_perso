@@ -1,23 +1,29 @@
-*{
-    font-family: 'Dactylographe', sans-serif;
+
+body {
+    background-image: url(https://wallpaperaccess.com/full/56591.png);
+    opacity: 0.90;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 h2 {
     color: #891b0c;
 }
 
-h3{
+h3 {
     color: black;
 }
 
-h4{
+h4 {
     color: black;
 }
 
-p{
+p {
     color: black;
 }
-main{
+
+main {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,7 +33,7 @@ main{
     font-size: 100%;
 }
 
-#Pendu{
+#Pendu {
     background-image: url("https://st3.depositphotos.com/1782409/16213/v/600/depositphotos_162136934-stock-illustration-telegram-blank-form.jpg");
     background-repeat: no-repeat;
     background-size: contain;
@@ -39,7 +45,7 @@ main{
     margin-bottom: 500px;
 }
 
-#consignes{
+#consignes {
     position: relative;
     top: 110px;
     background: none;
@@ -49,13 +55,13 @@ main{
     justify-content: center;
 }
 
-#lifes{
+#lifes {
     position: relative;
     top : 80px;
 }
 
 
-#aide{
+#aide {
     position: relative;
     top: 100px;
     margin-left: 25px;
@@ -70,27 +76,29 @@ main{
     align-items: center;
     font-size: 120%;
 }
-    #hidden_word{
+    #hidden_word {
         width: 30%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         height: 90px;
     }
-    #dessin{
+
+    /* #dessin {
         width: 40%;
         height: 90px;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-        #dessin img{
+
+        #dessin img {
             height: 150px;
             width: 280px;
             background: none;
-        }
+        } */
 
-    #history{
+    #history {
         width: 30%;
         display: flex;
         flex-direction: column;
@@ -99,7 +107,7 @@ main{
         height: 90px;
     }
 
-#keyboard{
+#keyboard {
     position: relative;
     top: 200px;
     display: flex;
@@ -109,7 +117,8 @@ main{
     padding-right: 10px;
     padding-left: 10px;
 }
-    #keyboard button{
+
+    #keyboard button {
         background: none;
         width: 60px;
         height: 60px;
@@ -119,6 +128,7 @@ main{
         background-color: black;
         color: white;
     }
+
     #keyboard button:hover {
         transform: scale(0.85);
         transition-duration: 0.3s;
@@ -128,13 +138,14 @@ main{
         transition-duration: 0.3s;
     }
 
-#replay{
+#replay {
     top: 190px;
     width: 100%;
     display: flex;
     justify-content: center;
 }
-    #reset_button{
+
+    #reset_button {
         border-radius: 20px;
         border: solid 2px #891b0c;
         color:#891b0c;
@@ -144,17 +155,18 @@ main{
         width: 100%;
         font-size: 180%;
     }
+
     #reset_button:hover {
         background-color: gold;
         transition-duration: 0.5s;
     }
     
-@media screen and (max-width:920px){
-    main{
+@media screen and (max-width:920px) {
+    main {
         margin: 0;
     }
 
-    #Pendu{
+    #Pendu {
         background-image: url("https://st3.depositphotos.com/1782409/16213/v/600/depositphotos_162136934-stock-illustration-telegram-blank-form.jpg");
         background-repeat: no-repeat;
         background-size: contain;
@@ -166,7 +178,7 @@ main{
         margin: 0;
     }
     
-    #consignes{
+    #consignes {
         position: relative;
         font-size: 60%;
         top: 45px;
@@ -177,15 +189,14 @@ main{
         justify-content: center;
     }
     
-    #lifes{
+    #lifes {
         position: relative;
         top : 55px;
         font-size: 70%;
 
     }
-    
-    
-    #aide{
+      
+    #aide {
         position: relative;
         top: -75px;
         font-size: 60%;
@@ -196,27 +207,30 @@ main{
         height: 180px;
         display: flex;
     }
-        #hidden_word{
+
+        #hidden_word {
             width: 30%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             height: 90px;
         }
-        #dessin{
+
+        #dessin {
             width: 40%;
             height: 90px;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
-            #dessin img{
+
+            #dessin img {
                 height: 150px;
                 width: 280px;
                 background: none;
             }
     
-        #history{
+        #history {
             width: 30%;
             display: flex;
             flex-direction: column;
@@ -225,7 +239,7 @@ main{
             height: 90px;
         }
     
-    #keyboard{
+    #keyboard {
         position: relative;
         top: -70px;
         display: flex;
@@ -233,7 +247,8 @@ main{
         gap: 10px;
         justify-content: center;
     }
-        #keyboard button{
+
+        #keyboard button {
             background: none;
             width: 40px;
             height: 40px;
@@ -244,13 +259,14 @@ main{
             /* color: black; */
         }
     
-        #replay{
+        #replay {
             top: 190px;
             width: 100%;
             display: flex;
             justify-content: center;
         }
-            #reset_button{
+
+            #reset_button {
                 border-radius: 20px;
                 border: solid 2px #891b0c;
                 color:#891b0c;
@@ -260,6 +276,7 @@ main{
                 width: 100%;
                 font-size: 120%;
             }
+            
             #reset_button:hover {
                 background-color: gold;
                 transition-duration: 0.5s;

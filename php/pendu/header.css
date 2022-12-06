@@ -1,11 +1,11 @@
 
-header{
+header {
     height: 80px;
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-    margin-bottom: 30px;
     font-size: 150%;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 nav {
@@ -14,30 +14,34 @@ nav {
     justify-content: center;
 }
     
-    nav ul{
+    nav ul {
         display: flex;
         gap: 30px;
         padding :0;
     }
-    nav ul a{
+
+    nav ul a {
         text-decoration: none;
         color: white;
         font-family: Arial, Helvetica, sans-serif;
     }
 
-    nav ul a:hover{
+    nav ul a:hover {
         color: gold;
         text-decoration: underline gold;
         transition-duration: 0.3s;
     }
-    nav ul li{
+
+    nav ul li {
         list-style-type: none;
     }
- #deco_form{
+
+ #deco_form {
     border: none;
     text-decoration: none;
 }
-nav button{
+
+nav button {
     border: none;
     text-decoration: none;
     color: white;
@@ -45,18 +49,20 @@ nav button{
     font-size: 100%;
     background: none;
 }
-    nav button:hover{
+
+    nav button:hover {
         color: gold;
         text-decoration: underline gold;
         transition-duration: 0.3s;
     }
 
 @media screen and (max-width:920px){
-    header{
+    header {
         margin-bottom: 0;
         font-size: 90%;
     }
-    nav ul{
+
+    nav ul {
         gap: 10px;
     }
 }

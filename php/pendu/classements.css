@@ -1,4 +1,12 @@
-#classement{
+body {
+    background-image: url(https://wallpaperaccess.com/full/56591.png);
+    opacity: 0.90;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#classement {
     color: white;
     display: flex;
     flex-direction: column;
@@ -7,14 +15,15 @@
     
 }
 
-table{
+table {
     border: solid 2px white;
     margin-bottom: 250px;
+    border-collapse: collapse;
 }
-    th{
+    th {
         border-bottom: solid 2px white;;
         width: 150px;
     }
-    td{
-        align-items: center;
+    td {
+        text-align: center;
     }   

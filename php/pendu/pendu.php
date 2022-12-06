@@ -4,7 +4,7 @@
     include 'stats.php';   
     
     if(isset($_SESSION['chosen_word'])){
-        if(isset($_GET['reset']) && $_GET['reset'] == 'reset'){
+        if(isset($_GET['reset']) && $_GET['reset'] == 'reset') {
             $_SESSION['chosen_word'] = '';
         }
     }
@@ -20,7 +20,7 @@
 // le nombre de mots dans la 3ème. Le compte me permet de générer un mot au hasard plus bas.
 
     
-    if(!isset($_SESSION['chosen_word']) || $_SESSION['chosen_word'] == ''){
+    if(!isset($_SESSION['chosen_word']) || $_SESSION['chosen_word'] == '') {
         
         $_SESSION['chosen_word'] = $dico_sans_espaces[rand(0, $wCount -1)];
         $_SESSION['chosen_word'] = str_replace($search, $replace, $_SESSION['chosen_word']);
@@ -33,7 +33,7 @@
 // J'ai créé cette variable de session que j'incrémente de 1 à chaque tour pour pouvoir faire ma stat sur le nombre de parties lancées.
 
         $_SESSION['hidden_word'] = '';
-        for($x = 0; $x < strlen($_SESSION['chosen_word']); $x++){
+        for($x = 0; $x < strlen($_SESSION['chosen_word']); $x++) {
             $_SESSION['hidden_word'] = $_SESSION['hidden_word'] . '-';
         }
 // hidden_word me génère autant de tirets qu'il y a de lettres dans le mot choisi. chaque fois 
@@ -47,16 +47,17 @@
 // history va venir stocker les lettres proposées par le joueur qui ne sont pas dans le mot choisi.
 
         
-    if(isset($_GET['letter'])){
+    if(isset($_GET['letter'])) {
         $repeat = 0;
-        if(str_contains($_SESSION['hidden_word'], $_GET['letter']) || str_contains($_SESSION['history'], $_GET['letter'])){
+        if(str_contains($_SESSION['hidden_word'], $_GET['letter']) || str_contains($_SESSION['history'], $_GET['letter'])) {
             $message = 'Tu as déjà proposé cette lettre.';
             $repeat = 1;
         }
-        else{
-            if(str_contains($_SESSION['chosen_word'], $_GET['letter'])){
-                for($i = 0; $i < strlen($_SESSION['chosen_word']); $i++){
-                    if($_SESSION['chosen_word'][$i] == $_GET['letter']){
+
+        else {
+            if(str_contains($_SESSION['chosen_word'], $_GET['letter'])) {
+                for($i = 0; $i < strlen($_SESSION['chosen_word']); $i++) {
+                    if($_SESSION['chosen_word'][$i] == $_GET['letter']) {
                         $_SESSION['hidden_word'][$i] = $_GET['letter'];
                     }
                 }
@@ -65,7 +66,9 @@
 // Mon premier if vérifie si une lettre a été cliquée. Je commence a vérifier si la lettre a été proposée avec mon compteur $repeat, 
 // et si ce n'est pas le cas on passe à la suite.
                     
-            } else {
+            } 
+            
+            else {
             $_SESSION['lifes'] --;
             $_SESSION['history'] = $_SESSION['history'] . $_GET['letter'] . '-';
 // Si le joueur propose une mauvaise lettre, il perd une vie et la lettre est rajoutée dans l'historique.
@@ -79,22 +82,22 @@
 
     $message;
 
-    if($_SESSION['lifes'] == 7){
+    if($_SESSION['lifes'] == 7) {
         $message = 'Tu as un mot de ' . strlen($_SESSION['chosen_word']). ' lettres à trouver';
-    };
+    }
 
-    if($_SESSION['lifes'] == 0 && $_SESSION['hidden_word'] !== $_SESSION['chosen_word']){
+    if($_SESSION['lifes'] == 0 && $_SESSION['hidden_word'] !== $_SESSION['chosen_word']) {
         $message = 'Perdu ! Le mot à trouver était ... ' . $_SESSION['chosen_word'];
     }
         
-    if(isset($_GET['letter']) && $_SESSION['lifes'] > 0 && $repeat == 0){
+    if(isset($_GET['letter']) && $_SESSION['lifes'] > 0 && $repeat == 0) {
         if($_SESSION['hidden_word'] == $_SESSION['chosen_word']){
             $message = 'Tu as trouvé le mot, Bravo !';
-            }            
+        }            
         elseif(str_contains($_SESSION['chosen_word'], $_GET['letter'])
         && $_SESSION['hidden_word'] !== $_SESSION['chosen_word']){
-            for($i = 0; $i < strlen($_SESSION['chosen_word']); $i++){
-                if($_SESSION['chosen_word'][$i] == $_GET['letter']){
+            for($i = 0; $i < strlen($_SESSION['chosen_word']); $i++) {
+                if($_SESSION['chosen_word'][$i] == $_GET['letter']) {
                     $message = 'Bien vu !';
                     break;
                 }
@@ -109,7 +112,7 @@
     }
 
 
-    if(isset($_GET['letter']) && $_SESSION['lifes'] < 0){
+    if(isset($_GET['letter']) && $_SESSION['lifes'] < 0) {
         $message = 'La partie est finie ! Clique plutôt sur rejouer ;)';
 // Je n'avais pas de solution pour stopper la partie si le joueur n'avait plus de vies et continuait 
 // à cliquer sur des lettres. Je contourne le problème en affichant ce message tant que les vies 
@@ -123,14 +126,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="index.css" rel="stylesheet">
     <link href="pendu.css" rel="stylesheet">
     <title>Pendu PHP</title>
 </head>
 
 <body>
     
-    <div class="background">
         <?php
             include 'header.php';
         ?>
@@ -153,7 +154,7 @@
                     <section id='lifes'>
                         <h3>Vies restantes : 
                             <?php 
-                                if($_SESSION['lifes'] >= 0){
+                                if($_SESSION['lifes'] >= 0) {
                                     echo $_SESSION['lifes'];
                                 } 
                             ?>
@@ -168,7 +169,7 @@
                             <p>
                                 <?php
                                     if($_SESSION['lifes'] >= 0){
-                                        for($i = 0; isset($_SESSION['hidden_word'][$i]); $i++){
+                                        for($i = 0; isset($_SESSION['hidden_word'][$i]); $i++) {
                                             echo $_SESSION['hidden_word'][$i] . ' ';
                                         }
                                     }
@@ -180,9 +181,9 @@
 
                         <section id='dessin'>
                             <!-- <?php
-                            if(isset($_SESSION['chosen_word']) && $_SESSION['lifes'] >= 0){
+                            if(isset($_SESSION['chosen_word']) && $_SESSION['lifes'] >= 0) {
                                 echo '<img src="pendu' . $_SESSION['lifes'] . '.png">';
-                            } elseif(isset($_SESSION['chosen_word']) && $_SESSION['lifes'] < 0){
+                            } elseif(isset($_SESSION['chosen_word']) && $_SESSION['lifes'] < 0) {
                                 echo '<img src="pendu0.png">';
                             }
                             ?> -->
@@ -195,7 +196,7 @@
                             <br>
                             <p>
                                 <?php 
-                                    if($_SESSION['lifes'] >= 0){
+                                    if($_SESSION['lifes'] >= 0) {
                                         echo $_SESSION['history'];
                                     }
                                 ?>
@@ -232,7 +233,6 @@
                 </form>
             </section>
         </main>
-    </div>
         
 </body>
 </html>
@@ -246,17 +246,17 @@
 
 include 'connecSQL.php';
 // Stats pour les users:
-if(isset($_SESSION['user']) && $_SESSION['lifes'] == 0 && $_SESSION['hidden_word'] !== $_SESSION['chosen_word']){  
+if(isset($_SESSION['user']) && $_SESSION['lifes'] == 0 && $_SESSION['hidden_word'] !== $_SESSION['chosen_word']) {  
     $request= "UPDATE Users SET parties = parties+1, defaites = defaites+1 WHERE id = '$_SESSION[userID]'";
     $query = $mysqli->query($request);
     }
 
-if(isset($_SESSION['user']) && $_SESSION['lifes'] > 0 && $_SESSION['hidden_word'] == $_SESSION['chosen_word']){  
+if(isset($_SESSION['user']) && $_SESSION['lifes'] > 0 && $_SESSION['hidden_word'] == $_SESSION['chosen_word']) {  
     $request= "UPDATE Users SET parties = parties+1, victoires = victoires+1 WHERE id = '$_SESSION[userID]'";
     $query = $mysqli->query($request);
     }
 
-if(isset($_SESSION['chosen_word']) && $_SESSION['hidden_word'] == $_SESSION['chosen_word'] && $_SESSION['lifes'] > 0){
+if(isset($_SESSION['chosen_word']) && $_SESSION['hidden_word'] == $_SESSION['chosen_word'] && $_SESSION['lifes'] > 0) {
     $len_word = strlen($_SESSION['chosen_word']);
     if(isset($_SESSION['user'])){
         $request_word = "INSERT INTO Mots(Mot, victoires, defaites, joueur, longueur) 
@@ -269,7 +269,7 @@ if(isset($_SESSION['chosen_word']) && $_SESSION['hidden_word'] == $_SESSION['cho
     }
 }
     
-if(isset($_SESSION['chosen_word']) && $_SESSION['lifes'] == 0 && $_SESSION['hidden_word'] !== $_SESSION['chosen_word']){
+if(isset($_SESSION['chosen_word']) && $_SESSION['lifes'] == 0 && $_SESSION['hidden_word'] !== $_SESSION['chosen_word']) {
     $len_word = strlen($_SESSION['chosen_word']);
     if(isset($_SESSION['user'])){
         $request_word  = "INSERT INTO Mots(Mot, victoires, defaites, joueur, longueur) 

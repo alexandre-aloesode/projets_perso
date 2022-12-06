@@ -59,12 +59,9 @@
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
     crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link href="formulaires.css" rel = "stylesheet">
-    <link href="index.css" rel = "stylesheet">
     <title>Inscription</title>
 </head>
 <body>
-
-    <div class="background">
 
     <?php include 'header.php' ?>
 
@@ -78,7 +75,7 @@
                         echo 'Félicitations!';
                     }
                     else{
-                        echo 'Remplissez les champs suivants afin de créer votre compte';
+                        echo 'Remplis les champs suivants pour créer ton compte';
                     }
                 ?>   
             </h2>
@@ -98,13 +95,12 @@
                 <br>
                 <input type="password" name="mdp" placeholder="Mot de passe" class="form_input">
                 <br>
-                <input type="password" name="mdp_confirm" placeholder="Confirmez votre mot de passe" class="form_input">
+                <input type="password" name="mdp_confirm" placeholder="Confirme ton mot de passe" class="form_input">
                 <br>
-                <button type="submit" name="inscription" class="form_button">Créer votre compte</button>
+                <button type="submit" name="inscription" class="form_button">Créer ton compte</button>
                 </form>
             
             <?php endif; ?>
-    </main>
-    </div>  
+    </main> 
 </body>
 </html>
