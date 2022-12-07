@@ -19,7 +19,7 @@
         <?php 
             if($check !== 2) {
             echo '
-            <h2>Remplis les champs suivants pour te connecter</h2>';
+            <h2>Connexion</h2>';
             }
         ?>
 

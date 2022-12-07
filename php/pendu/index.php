@@ -58,83 +58,22 @@
 
     <main>
 
-        <section id="accueil">
+    <div id="panneau_accueil">
 
-            <div id="accueil_texte">
+        <img id="accueil_img" 
+        src="panneau_western.png">
 
+        <h2>Welcome to <br> Hanging Town</h2>
 
-                <h2>Bienvenue à toi aventurier !</h2>
+    </div>
 
-                <p>Connecte toi pour pousser fort ... 
-                    <a href="connexion.php">c'est par ici !</a>
-                </p>
+    <!-- <div id="best_players">
 
-                <p>Si tu n'as pas encore de compte, il n'est jamais trop tard pour pousser fort ...
-                    <a href="inscription.php">c'est par ici !</a>
-                </p>
+        <img id="best_players_img1" src="https://i.pinimg.com/originals/1a/21/f0/1a21f05ba6e3e7ae528ccfa538fb7cef.png">
+        <img id="best_players_img1" src="https://i.pinimg.com/originals/1a/21/f0/1a21f05ba6e3e7ae528ccfa538fb7cef.png">
 
-                <p>Sinon lance-toi direct dans l'aventure en mode random ...
-                    <a href="pendu.php">c'est par ici !</a>
-                </p>
+    </div> -->
 
-            </div>
-
-            <div id="accueil_stats">
-
-                <h3>Jusqu'ici ... </h3>
-                <br>
-
-                <h4>Total de parties jouées :</h4>
-                <p> <?php echo $show_total_parties[0][0] ?></p>
-
-                <h4>Total de victoires :</h4>
-                <p> <?php echo $show_total_victoires[0][0] ?></p>
-
-                <h4>Longueur moyenne des mots :</h4>
-                <p> <?php echo $show_avg_len[0][0] ?></p>
-
-            </div>
-        </section>
-
-        <section id="stats">
-
-            <div class="stat">
-
-                <h3>Celui qui pousse très fort</h3>
-                <p>Pseudo :
-                    <?php echo $show_biggest_player[0][0] ?>
-                </p>
-
-                <p>Nombre de parties :
-                    <?php echo $show_biggest_player[0][1] ?>
-                </p>
-
-            </div>
-
-            <div class="stat">
-
-                <h3>Celui qui pousse efficacement</h3>
-                <p>Pseudo :
-                    <?php echo $player ?>
-                </p>
-                <p>Pourcentage de victoires :
-                    <?php echo $res . '%'?>
-                </p>
-
-            </div>
-
-            <div class="stat">
-
-                <h3>Celui qui pousse pas assez fort</h3>
-                <p>Pseudo :
-                    <?php echo $show_lowest_player[0][0] ?>
-                </p>
-                <p>Nombre de parties :
-                    <?php echo $show_lowest_player[0][1] ?>
-                </p>
-
-            </div>
-        </section>
     </main>
 
     <?php include 'footer.php' ?>

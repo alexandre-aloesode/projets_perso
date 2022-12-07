@@ -1,61 +1,55 @@
 
 body {
-    background-image: url(https://wallpaperaccess.com/full/56591.png);
+    background-image: url(https://img.static-rmg.be/a/view/q75/w/h/4264789/7b3a5f1da9a8a561eb640324335a6e8a-jpg.jpg);
     opacity: 0.90;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    font-family: 'PT Sans Narrow', sans-serif;
     margin: 0;
+    height: 900px;
 }
 
 main {
-    margin-top: 100px;
     display: flex;
     flex-direction: column;
     margin-left: 15%;
     margin-right: 15%;
     font-size: 150%;
+    color: black;
+    align-items: center;
+    font-family: 'Western', sans-serif;
+    padding-bottom: 150px;
+}
+
+#accueil_img{
+    position: relative;
+    top: 500px;
+    right: 700px; 
+    height: 400px;
+}
+
+#panneau_accueil h2{
+    position: relative;
+    top: 110px;
+    right: 685px;
     color: white;
+    font-size: 220%;
+    line-height: 60px;
 }
 
-    main h2 {
-        margin-bottom: 30px;
-    }
-
-    main p {
-        margin-bottom: 20px;
-    }
-
-#accueil {
+/* .best_players {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    justify-content: space-between;
 }
 
-    #accueil_texte {
-        display: flex;
-        flex-direction: column;
-        width: 65%;
-    }
-
-    #accueil_stats {
-        display: flex;
-        flex-direction: column;
-        border-left: solid 2px white;
-        padding-left: 5%;
-        width: 25%;
-    }
-
-#stats {
-    margin-top: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 300px;
+#best_players_img1 {
+    width: 200px;
+    height: 250px;
 }
+
+#best_players_img2 {
+    width: 200px;
+} */
 
 @media screen and (max-width:920px) {
     main {

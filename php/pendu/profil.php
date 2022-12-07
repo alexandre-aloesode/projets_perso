@@ -90,7 +90,7 @@
     <main>
         
         <form method="post" class ="formulaire">
-        <h2>Remplis les champs que tu souhaites modifier</h2>
+        <h2>Edition profil</h2>
         <h3>
            <?php 
                 if(isset($_POST['profil_change'])) { 

@@ -75,7 +75,7 @@
                         echo 'Félicitations!';
                     }
                     else{
-                        echo 'Remplis les champs suivants pour créer ton compte';
+                        echo 'Inscription';
                     }
                 ?>   
             </h2>

@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Roboto:ital,wght@1,300&display=swap');
+@import url('https://fonts.cdnfonts.com/css/western');
+
 
 body {
     background-image: url(https://wallpaperaccess.com/full/56591.png);
-    opacity: 0.90;
+    opacity: 0.9;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -14,25 +15,27 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'PT Sans Narrow', sans-serif;
-    }
+    font-family: 'Western', sans-serif;
+    letter-spacing: 2px;
+}
 
 .formulaire {
+    background-image: url(https://us.123rf.com/450wm/ke77kz/ke77kz1702/ke77kz170200205/72665903-fond-de-papier-jaune-vieilli-pour-la-conception-.jpg?ver=6);
+    background-size: cover;
+    opacity: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     border: none;
-    border-radius: 10px;
-    background-color: white;
+    border-radius: 5px;
     padding: 30px;
     width: 30%;
     font-size: 120%;
-    box-shadow: 5px 5px 5px 5px white;
 }
 
 .formulaire h2 {
-    background-color: white;
-    border-bottom: solid 2px #0160B7;
+    border-bottom: solid 2px #891b0c;
+    color: #891b0c;
     font-size: 150%;
     padding-bottom: 20px;
     margin-bottom: 20px;
@@ -42,11 +45,10 @@ main{
     }
 
 .formulaire h3 {
-    background-color: white;
     font-size: 120%;
     padding-bottom: 20px;
     margin-bottom: 10px;
-    color: #0160B7;
+    color: #891b0c;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -56,7 +58,6 @@ main{
         display: flex;
         justify-content: center;
         width: 80%;
-        background-color: white;
         font-size: 90%;
     }
 
@@ -65,21 +66,23 @@ main{
         height: 50px;
         border-radius: 5px;
         border: 1px solid #6B4B3E;
-        outline-color: #0160B7;
-        background-color: white;
+        outline-color: #891b0c;
+        background-color: moccasin;
         font-size: 100%;
-        font-family: 'PT Sans Narrow', sans-serif;
+        font-family: 'Western', sans-serif;
+        opacity: 0.7;
+        color: black;
     }
     
     .formulaire button {
         height: 40px;
         font-size: 100%;
         border-radius: 5px;
-        background-color: #0160B7;
+        background-color: #891b0c;
         color: white;
         border: none;
         width: 50%;
-        font-family: 'PT Sans Narrow', sans-serif;
+        font-family: 'Western', sans-serif;
     }
 
     .formulaire button:hover {
