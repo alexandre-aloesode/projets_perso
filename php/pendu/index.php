@@ -23,8 +23,8 @@
     for($x = 0; isset($stats[$x][3]); $x++){
         if($stats[$x][3] > $res){
             $res = $stats[$x][3];
-        }
-        $player = $stats[$x][0];
+            $player = $stats[$x][0];
+        }       
     }
 
 
@@ -61,6 +61,7 @@
         <section id="accueil">
 
             <div id="accueil_texte">
+
 
                 <h2>Bienvenue à toi aventurier !</h2>
 
@@ -135,5 +136,8 @@
             </div>
         </section>
     </main>
+
+    <?php include 'footer.php' ?>
+    
 </body>
 </html>

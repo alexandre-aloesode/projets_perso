@@ -6,9 +6,10 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    margin: 0;
 }
 
-h2 {
+main h2 {
     color: #891b0c;
 }
 
@@ -44,6 +45,7 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 500px;
+    font-family: 'PT Sans Narrow', sans-serif;
 }
 
 #consignes {

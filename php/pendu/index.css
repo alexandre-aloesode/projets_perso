@@ -5,6 +5,8 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    font-family: 'PT Sans Narrow', sans-serif;
+    margin: 0;
 }
 
 main {

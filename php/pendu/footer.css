@@ -1,0 +1,39 @@
+@import url('https://fonts.cdnfonts.com/css/western');
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 200px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 200px;
+    background-color: white;
+    font-family: 'Western', sans-serif;
+}
+
+    #copyright {
+    font-size: 120%;
+    color: black;
+    }
+
+    #links {
+        font-size: 300%;
+        width: 25%;
+        color: black;
+    }
+
+    #arrow_top {
+        font-size: 300%;
+        color: black;
+    }
+
+    footer a{
+        text-decoration: none;
+        color: black;
+    }
+
+    footer i {
+        color: black;
+    }

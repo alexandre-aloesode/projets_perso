@@ -4,6 +4,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    margin: 0;
 }
 
 main {
@@ -14,18 +15,20 @@ main {
     margin-top: 50px;
 }
 
-h2 {
-    color: white;
+main h2 {
     text-decoration: underline;
     display: flex;
     justify-content: center;
     font-size: 200%;
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: white;
 }
 
 table {
     border-collapse: collapse;
     line-height: 50px;
     width: 90%;
+    font-family: 'PT Sans Narrow', sans-serif;
 }
 
     thead {
