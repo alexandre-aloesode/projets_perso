@@ -58,6 +58,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
     crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href="header.css" rel="stylesheet">
+    <link href="footer.css" rel="stylesheet">
     <link href="formulaires.css" rel = "stylesheet">
     <title>Inscription</title>
 </head>
@@ -91,13 +93,22 @@
             <?php
                 if(!isset($_POST['inscription']) || $_POST['mdp'] !== $_POST['mdp_confirm'] || $user == 0 || empty($_POST['pseudo'])):
             ?>
-                <input type="text" name="pseudo" placeholder="Pseudo" class="form_input">
+                <label for="pseudo" class="form_label">Pseudo :</label>
                 <br>
-                <input type="password" name="mdp" placeholder="Mot de passe" class="form_input">
+                <input type="text" name="pseudo" class="form_input">
                 <br>
-                <input type="password" name="mdp_confirm" placeholder="Confirme ton mot de passe" class="form_input">
+
+                <label for="mdp" class="form_label">MDP :</label>
                 <br>
-                <button type="submit" name="inscription" class="form_button">Créer ton compte</button>
+                <input type="password" name="mdp" class="form_input">
+                <br>
+
+                <label for="mdp_confirm" class="form_label">Confirme ton MDP </label>
+                <br>
+                <input type="password" name="mdp_confirm" class="form_input">
+                <br>
+
+                <button type="submit" name="inscription" class="form_button">Confirmer</button>
                 </form>
             
             <?php endif; ?>

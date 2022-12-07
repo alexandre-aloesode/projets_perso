@@ -37,3 +37,18 @@ footer {
     footer i {
         color: black;
     }
+
+@media screen and (max-width:920px) {
+
+    footer {
+        height: 150px;
+        font-size: 80%;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    #arrow_top {
+        display: none;
+    }
+}

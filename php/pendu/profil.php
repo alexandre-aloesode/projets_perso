@@ -78,6 +78,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="formulaires.css" rel="stylesheet">
+    <link href="header.css" rel="stylesheet">
+    <link href="footer.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
     crossorigin="anonymous" referrerpolicy="no-referrer"/>
@@ -90,7 +92,9 @@
     <main>
         
         <form method="post" class ="formulaire">
+
         <h2>Edition profil</h2>
+
         <h3>
            <?php 
                 if(isset($_POST['profil_change'])) { 
@@ -98,24 +102,30 @@
                 }
             ?>
         </h3>
+
             <label for="pseudo" class="form_label">Pseudo : </label>
+            <br>
             <input type="text" name="profil_pseudo" value="<?php echo $result_fetch_user_info[0][1]?>" class="form_input" >
             <br>       
 <!-- infos des values récupérées grâce à ma requête sql du haut de la page -->
 
-            <label for="new_mdp" class="form_label">Nouveau mot de passe : </label>
+            <label for="new_mdp" class="form_label">Nouveau MDP :</label>
+            <br>
             <input type="password" name="profil_new_mdp" class="form_input">
             <br>
 
-            <label for="new_mdp_confirm" class="form_label">Confirmez votre nouveau mot de passe</label>
+            <label for="new_mdp_confirm" class="form_label">Confirme ton nouveau MDP </label>
+            <br>
             <input type="password" name="new_mdp_confirm" class="form_input">
             <br>
 
-            <label for="mdp" class="form_label">Tape ton ancien mot de passe pour confirmer les changements</label>
+            <label for="mdp" class="form_label">Ancien MDP :</label>
+            <br>
             <input type="password" name="mdp" class="form_input">
             <br>
 
             <button type="submit" name="profil_change" class="form_button">Modifier</button>
+
         </form>
 
     </div>

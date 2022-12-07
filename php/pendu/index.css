@@ -21,6 +21,10 @@ main {
     padding-bottom: 150px;
 }
 
+#smartphone {
+    display: none;
+}
+
 #accueil_img{
     position: relative;
     top: 500px;
@@ -37,28 +41,46 @@ main {
     line-height: 60px;
 }
 
-/* .best_players {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-#best_players_img1 {
-    width: 200px;
-    height: 250px;
-}
-
-#best_players_img2 {
-    width: 200px;
-} */
-
 @media screen and (max-width:920px) {
+
+    body {
+        background-image: url(https://wallpaperaccess.com/full/56591.png);    
+        opacity: 0.90;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin: 0;
+        height: 850px;
+    }
+
     main {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
         margin-left: 5%;
         margin-right: 5%;
         font-size: 100%;
+    }
+
+    #panneau_accueil {
+        display: none;
+    }
+
+    #smartphone {
+        width: 90%;
+        margin-top: 60px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        }
+
+    #smartphone button {
+        height: 40px;
+        font-size: 100%;
+        border-radius: 5px;
+        background-color: #891b0c;
+        color: white;
+        border: none;
+        width: 90px;
+        font-family: 'Western', sans-serif;
+        margin-bottom: 20px;
     }
 }

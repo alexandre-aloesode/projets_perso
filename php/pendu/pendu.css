@@ -2,6 +2,7 @@
 
 body {
     background-image: url(https://wallpaperaccess.com/full/56591.png);
+    
     opacity: 0.90;
     background-repeat: no-repeat;
     background-position: center;
@@ -167,85 +168,45 @@ main {
     }
 
     #Pendu {
-        background-image: url("https://st3.depositphotos.com/1782409/16213/v/600/depositphotos_162136934-stock-illustration-telegram-blank-form.jpg");
-        background-repeat: no-repeat;
-        background-size: contain;
         width:90%;
-        border-radius: 10px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
         margin: 0;
     }
     
     #consignes {
-        position: relative;
         font-size: 60%;
-        top: 45px;
-        background: none;
+        top: 35px;
         width: 100%;
         height: 80px;
-        display: flex;
-        justify-content: center;
     }
     
     #lifes {
         position: relative;
-        top : 55px;
+        top : 40px;
         font-size: 70%;
 
     }
       
     #aide {
-        position: relative;
-        top: -75px;
+        top: -50px;
         font-size: 60%;
         margin-left: 5px;
         margin-right: 5px;
-        background: none;
         width: 100%;
-        height: 180px;
+        height: 100px;
         display: flex;
     }
 
-        #hidden_word {
-            width: 30%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: 90px;
-        }
+    #hidden_word{
+        line-height: 0px;
+    }
 
-        #dessin {
-            width: 40%;
-            height: 90px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-            #dessin img {
-                height: 150px;
-                width: 280px;
-                background: none;
-            }
-    
-        #history {
-            width: 30%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-end;
-            height: 90px;
-        }
-    
+    #history{
+        line-height: 0px;
+        width: 40%;
+    }
+ 
     #keyboard {
-        position: relative;
-        top: -70px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
+        top: 5px;
     }
 
         #keyboard button {
@@ -256,14 +217,6 @@ main {
             border-radius: 50px;
             border: solid 2px white;
             background-color: black;
-            /* color: black; */
-        }
-    
-        #replay {
-            top: 190px;
-            width: 100%;
-            display: flex;
-            justify-content: center;
         }
 
             #reset_button {
@@ -275,10 +228,5 @@ main {
                 background-color: #EBD29D;
                 width: 100%;
                 font-size: 120%;
-            }
-
-            #reset_button:hover {
-                background-color: gold;
-                transition-duration: 0.5s;
             }
 }

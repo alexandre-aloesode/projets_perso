@@ -49,3 +49,22 @@ table {
     i {
         color: white;
     } 
+
+    @media screen and (max-width:920px) {
+
+        main {
+            margin: 0;
+        }
+
+        main h2 {
+            font-size: 150%;
+        }
+
+        thead {
+            font-size: 60%;
+        }
+
+        td {
+            font-size: 80%;
+          }
+    }
