@@ -1,6 +1,5 @@
-<?php
-    include 'connec.php'
-?>
+
+<?php include 'connec.php' ?>
 
 <header>
 

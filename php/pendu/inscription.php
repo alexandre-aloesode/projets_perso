@@ -27,14 +27,21 @@
                     }
             } 
             
-    //création du compte si le user n'existe pas déjà.
+    //création du compte si le user n'existe pas déjà et redirection vers page de connexion comme demandé dans l'énoncé.
             if($_POST['mdp'] == $_POST['mdp_confirm'] && $user == 1){
                 $login = $_POST['pseudo'];
                 $mdp_hash = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
-                $request_create = "INSERT INTO `Users`(`login`, `password`, `parties`, `victoires`, `defaites`)
-                VALUES ('$login','$mdp_hash',0,0,0)";
-                $query_create = $mysqli->query($request_create); 
-            }
+                $request_create = "INSERT INTO `Users`(`login`, `password`, parties, victoires, defaites) 
+                VALUES ('$login','$mdp_hash', 0, 0, 0)";
+                $query_create = $mysqli->query($request_create);
+
+// Les lignes ci_dessous me permettent de connecter automatiquement l'utilisateur après avoir créé son compte. Ensuite dans connec.php je vais récupérer son ID.      
+                if(session_id() == ''){
+                    session_start();
+                }
+                $_SESSION['user'] = $_POST['pseudo'];
+                // header('Location: connexion.php');
+                }
 
     // conditions pour vérifier si le mdp est bien tapé, si le pseudo existe déjà, ou si le compte 
     // a bien été crée et afficher un message en foncton.

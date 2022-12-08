@@ -21,6 +21,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <title>Classements Pendu</title>
 </head>
+
 <body>
 
     <?php include 'header.php' ?>

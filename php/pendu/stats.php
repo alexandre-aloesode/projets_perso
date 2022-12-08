@@ -28,7 +28,7 @@ if(isset($_SESSION['chosen_word'])){
 }
 
 //Stats pour les lettres:
-if(isset($_GET['letter']) && $_SESSION['lifes'] > 0){
+if(isset($_GET['letter']) && isset($_SESSION['lifes']) && $_SESSION['lifes'] > 0){
     if(!str_contains($_SESSION['hidden_word'], $_GET['letter']) && !str_contains($_SESSION['history'], $_GET['letter'])) {
         $request= "UPDATE Lettres SET $_GET[letter] = $_GET[letter]+1 ";
         $query = $mysqli->query($request);

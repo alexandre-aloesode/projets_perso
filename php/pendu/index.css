@@ -1,6 +1,6 @@
 
 body {
-    background-image: url(https://img.static-rmg.be/a/view/q75/w/h/4264789/7b3a5f1da9a8a561eb640324335a6e8a-jpg.jpg);
+    background-image: url("index_img.jpg");
     opacity: 0.90;
     background-repeat: no-repeat;
     background-position: center;
@@ -18,27 +18,57 @@ main {
     color: black;
     align-items: center;
     font-family: 'Western', sans-serif;
-    padding-bottom: 150px;
+    height: 1000px;
 }
 
 #smartphone {
     display: none;
 }
 
-#accueil_img{
+#accueil_img {
     position: relative;
     top: 500px;
     right: 700px; 
     height: 400px;
 }
 
-#panneau_accueil h2{
+#panneau_accueil h2 {
     position: relative;
     top: 110px;
     right: 685px;
     color: white;
     font-size: 220%;
     line-height: 60px;
+}
+
+#best_players_img1 {
+    height: 250px;
+    position: relative;
+    bottom: 690px;
+    right: 150px;
+}
+
+#most_active {
+    position: relative;
+    bottom: 875px;
+    right: 120px;
+    line-height: 5px;
+    font-size: 90%;
+}
+
+#best_players_img2 {
+    height: 250px;
+    position: relative;
+    bottom: 1050px;
+    left: 30px;  
+}
+
+#mvp {
+    position: relative;
+    bottom: 1237px;
+    left: 40px;
+    line-height: 5px;
+    font-size: 90%;
 }
 
 @media screen and (max-width:920px) {
@@ -50,13 +80,16 @@ main {
         background-position: center;
         background-size: cover;
         margin: 0;
-        height: 850px;
+        height: 880px;
     }
 
     main {
         margin-left: 5%;
         margin-right: 5%;
         font-size: 100%;
+        height: 800px;
+        margin-bottom: 0;
+        padding-bottom: 0;
     }
 
     #panneau_accueil {
@@ -82,5 +115,36 @@ main {
         width: 90px;
         font-family: 'Western', sans-serif;
         margin-bottom: 20px;
+    }
+    
+    #best_players{
+        display: flex;
+    }
+
+    #best_players_img1 {
+        height: 150px;
+        position: unset;
+        
+    }
+    
+    #most_active {
+        position: absolute;
+        line-height: 2px;
+        font-size: 90%;
+        left: 85px;
+        bottom: 555px;
+    }
+    
+    #best_players_img2 {
+        height: 150px;
+        position: unset;     
+    }
+    
+    #mvp {
+        position: absolute;
+        line-height: 2px;
+        font-size: 80%;
+        left: 186px;
+        bottom: 560px;
     }
 }

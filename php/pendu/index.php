@@ -72,6 +72,24 @@
 
     </div>
 
+    <div id="best_players">
+
+        <img id="best_players_img1" src="wanted1.png">
+        <div id="most_active">
+            <h3>Le plus actif</h3>
+            <p> <?php echo $show_biggest_player[0][0] ?></p>
+            <p><?php echo $show_biggest_player[0][1] ?> parties</p>
+        </div>
+
+        <img id="best_players_img2" src="wanted1.png">
+        <div id="mvp">
+            <h3>Le plus efficace</h3>
+            <p> <?php echo $player ?></p>
+            <p><?php echo $res ?>% de victoires</p>
+        </div>
+
+    </div>
+
     <div id="smartphone">
 
         <h2>Bienvenue !</h2>

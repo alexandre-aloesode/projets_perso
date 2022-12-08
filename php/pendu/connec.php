@@ -9,6 +9,16 @@
         header('Location: index.php');
     }
 
+    if(isset($_SESSION['user']) && empty($_SESSION['userID'])){
+        include 'connecSQL.php';
+        $request_ID = "SELECT id from Users WHERE login = '$_SESSION[user]'";
+        $query_ID = $mysqli->query($request_ID);
+        $result_ID = $query_ID->fetch_all();
+        $_SESSION['userID'] = $result_ID[0][0];
+    }
+// Ci-dessus une requête pour récupérer la user ID au cas où il vient de créer son compte, info important car c'est celle là que j'utilise pour afficher mon header par exemple.
+
+
     $check = 0;
 // Le $check me sert pour la connexion. si $check = 0 le user n'existe pas, 
 // si = 1 le nom d'user et le mdp ne correspondent pas

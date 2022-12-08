@@ -207,6 +207,7 @@ main {
  
     #keyboard {
         top: 5px;
+        margin-bottom: 150px;
     }
 
         #keyboard button {
